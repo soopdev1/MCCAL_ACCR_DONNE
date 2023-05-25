@@ -2019,7 +2019,7 @@ public class Db_Bando {
                 sql = sql + " and dataconsegna>'" + data_da + " 00:00:00' and dataconsegna<'" + data_a + " 23:59:59'";
             }
 
-            String pathdest = getPath("pathtemp" + generatedString + "_yisucalover.xlsx");
+            String pathdest = getPath("pathtemp" + generatedString + "_yisucaldonne.xlsx");
 
             PreparedStatement ps = this.c.prepareStatement(sql + " limit 1000");
             ResultSet rs = ps.executeQuery();
