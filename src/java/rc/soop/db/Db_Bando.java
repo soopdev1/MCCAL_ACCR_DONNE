@@ -1407,7 +1407,8 @@ public class Db_Bando {
             } else if (!data_da.trim().equals("") && !data_a.equals("")) {
                 sql = sql + " and dataconsegna>'" + data_da + " 00:00:00' and dataconsegna <'" + data_a + " 23:59:59'";
             }
-            PreparedStatement ps = this.c.prepareStatement(sql + " limit 1000");
+            
+            PreparedStatement ps = this.c.prepareStatement(sql + " ORDER BY dataconsegna DESC LIMIT 1000");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 li.add(new Domandecomplete(rs.getString("coddomanda"), rs.getString("username"), rs.getString("nome"),
