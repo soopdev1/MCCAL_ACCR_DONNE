@@ -60,24 +60,25 @@
                     <span class="form-title">LOGIN</span>
                 </div>
                 -->
-                    <div class="alert alert-danger display-hide">
+                <div class="alert alert-danger display-hide">
                     <button class="close" data-close="alert"></button>
                     <span>Inserire Username e Password</span>
-                    </div>
-                    <%if (request.getParameter("esito") != null) {
-                                if (request.getParameter("esito").equals("okr1")) {%>
-                    <div class="alert alert-success text-justify">
-                        Nuovo candidato accreditato con successo!
-                        <br>Ti abbiamo inviato una mail con  le credenziali di accesso (controlla anche nello spam). <br>
-                        Ti abbiamo anche  inviato un sms con la password temporanea da inserire al primo accesso.<br>
-                        Tale password deve essere utilizzata entro 12 ore.
-                    </div>
-                    <%} else if (request.getParameter("esito").equals("okr2")) {
+                </div>
+                <%if (request.getParameter("esito") != null) {
+                            if (request.getParameter("esito").equals("okr1")) {%>
+                <div class="alert alert-success text-justify">
+                    Nuovo candidato accreditato con successo!
+                    <br>Ti abbiamo inviato una mail con  le credenziali di accesso (controlla anche nello spam). <br>
+                    Ti abbiamo anche  inviato un sms con la password temporanea da inserire al primo accesso.<br>
+                    Tale password deve essere utilizzata entro 12 ore.
+                </div>
+                <%} else if (request.getParameter("esito").equals("okr2")) {
                     } else {%>
-                    <div class="alert alert-danger text-justify">
-                        <strong>Errore!</strong> <%=Label.getMessageLogin("IT", request.getParameter("esito"))%>
-                    </div>
-                    <%}}%>
+                <div class="alert alert-danger text-justify">
+                    <strong>Errore!</strong> <%=Label.getMessageLogin("IT", request.getParameter("esito"))%>
+                </div>
+                <%}
+                        }%>
                 <div class="form-group">
                     <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
                     <label class="control-label visible-ie8 visible-ie9">Username</label>
@@ -103,13 +104,14 @@
         </div>
         <div class="copyright"> 
             <div>
-                <strong> <img src="assets/soop/img/Adobe-PDF-Document-icon.png" alt=""/>                         
-                    <a class="" href="Download?action=guida" target="_blank" /> Guida all'utilizzo della piattaforma
-                </strong>
+                <img src="assets/soop/img/Adobe-PDF-Document-icon.png" alt=""/>                         
+                <a class="" href="Download?action=guida" target="_blank" ><b> Guida all'utilizzo della piattaforma</b></a>
                 <br/><br/>
-                <strong> <img src="assets/soop/img/Adobe-PDF-Document-icon.png" alt=""/>                         
-                    <a class="" href="Download?action=guidaConvenzioni" target="_blank" /> Guida per la gestione della documentazione di accreditamento
-                </strong>
+                <img src="assets/soop/img/Adobe-PDF-Document-icon.png" alt="" />                         
+                <a class="" href="Download?action=guidaConvenzioni" target="_blank" ><b> Guida per la gestione della documentazione di accreditamento</b></a>
+                <br/><br/>
+                <img src="assets/soop/img/Adobe-PDF-Document-icon.png" alt=""/>                         
+                <a class="" href="Download?action=privacyweb" target="_blank" > <b>Privacy Policy Web</b></a>
             </div>
             <br>
             <center>
@@ -125,7 +127,7 @@
                 </table>
             </center> 
 
-            
+
         </div>
         <!-- END LOGIN -->
         <!--[if lt IE 9]>
