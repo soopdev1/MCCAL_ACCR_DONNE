@@ -192,7 +192,7 @@
                                             </tr>
                                             <tr>
                                                 <td>DRDC</td> 
-                                                <td>Documeto riconoscimento</td> 
+                                                <td>Documento riconoscimento</td> 
                                                 <td>-</td> 
                                                 <td><%=dubd.get(i).getData()%></td>
                                                 <td>
@@ -207,9 +207,6 @@
                                                 </td> 
                                             </tr>
                                             <%
-                                                    System.out.println(dubd.get(i).getCv());
-                                                    System.out.println(dubd.get(i).getB1());
-                                                    System.out.println(dubd.get(i).getDr());
                                                 }
                                             %>
 

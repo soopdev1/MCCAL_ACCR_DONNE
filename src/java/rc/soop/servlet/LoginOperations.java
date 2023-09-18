@@ -7,13 +7,11 @@ package rc.soop.servlet;
 
 import static rc.soop.action.ActionB.trackingAction;
 import rc.soop.action.Constant;
-import static rc.soop.action.Constant.bando;
 import rc.soop.db.Db_Bando;
 import rc.soop.entity.UserBando;
 import rc.soop.util.Utility;
 import static rc.soop.util.Utility.redirect;
 import java.io.IOException;
-import java.util.logging.Level;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -479,7 +479,6 @@ public class Upload extends HttpServlet {
                             }
                         }
                     }
-//                    System.out.println(item.isFormField());
                 }
             } catch (Exception ex) {
                 trackingAction("service", Utility.estraiEccezione(ex));

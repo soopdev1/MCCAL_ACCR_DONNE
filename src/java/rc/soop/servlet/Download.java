@@ -111,7 +111,7 @@ public class Download extends HttpServlet {
             }
             response.setContentType(mimeType);
             String headerKey = "Content-Disposition";
-            String headerValue = String.format("attachment; filename=\"%s\"", downloadFile.getName());
+            String headerValue = String.format("inline; filename=\"%s\"", downloadFile.getName());
             response.setHeader(headerKey, headerValue);
             OutputStream outStream = response.getOutputStream();
             byte[] buffer = new byte[4096 * 4096];
