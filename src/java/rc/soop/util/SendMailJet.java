@@ -120,6 +120,7 @@ public class SendMailJet {
 
             response = client.post(request);
             Constant.log.log(Level.INFO, "MJ: {0}", response.getStatus());
+            Constant.log.log(Level.INFO, "MJ: {0}", response.getRawResponseContent());
             return response.getStatus() == 200;
         } catch (Exception ex) {
             ActionB.trackingAction("service", Utility.estraiEccezione(ex));
